@@ -1,0 +1,109 @@
+.footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  .container {
+    display: flex;
+  }
+}
+
+.footer-adress__logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer-adress__logo-part {
+  color: var(--second-title-color);
+}
+
+.footer-list__item {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.footer-list__address {
+  color: #ffffff;
+  transition: color var(--time-transition) var(--typical-cubic);
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+.footer-list__mail,
+.footer-list__tel {
+  color: rgba(255, 255, 255, 0.6);
+  transition: color var(--time-transition) var(--typical-cubic);
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+/* Footer social list */
+.footer-social {
+  margin-left: 70px;
+  margin-top: 12px;
+}
+
+.footer-title {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--second-title-color);
+  margin-bottom: 20px;
+}
+
+.footer__social-list {
+  fill: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color var(--time-transition) var(--typical-cubic),
+    fill var(--time-transition) var(--typical-cubic);
+}
+
+.footer-subscription {
+  margin-left: 93px;
+  margin-top: 12px;
+}
+
+.subscription-form {
+  display: flex;
+}
+
+.subscription-form__input {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.subscription-form__icon-send {
+  margin-left: 10px;
+}

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>WebStudio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <a class="link logo header__logo" href="./index.html" lang="en"
+          >Web<span class="header__logo-part">Studio</span></a
+        >
+        <nav class="header-navigation">
+          <ul class="list header-list">
+            <li class="header-list__item">
+              <a class="link header-list__link" href="./index.html">Студия</a>
+            </li>
+            <li class="header-list__item">
+              <a
+                class="link header-list__link header-list__link--current"
+                href="./portfolio.html"
+                >Портфолио</a
+              >
+            </li>
+            <li class="header-list__item">
+              <a class="link header-list__link" href="">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="list header-contact">
+          <li class="header-contact__point">
+            <a
+              class="link header-contact__link"
+              href="mailto:info@devstudio.com"
+            >
+              <svg class="header-contact__icon" width="16" height="12">
+                <use href="./images/icons.svg#icon-mail"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="header-contact__point">
+            <a class="link header-contact__link" href="tel:+380961111111"
+              ><svg class="header-contact__icon" width="10" height="16">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- Section 1 part 1 - Portfolio list  -->
+      <section class="portfolio">
+        <div class="container">
+          <h2 class="section-title visually-hidden">Наши работы</h2>
+          <ul class="pf-type-list">
+            <li class="pf-type-item">
+              <button type="button" class="pf-type-btn">Все</button>
+            </li>
+            <li class="pf-type-item">
+              <button type="button" class="pf-type-btn">Веб-сайты</button>
+            </li>
+            <li class="pf-type-item">
+              <button type="button" class="pf-type-btn">Приложения</button>
+            </li>
+            <li class="pf-type-item">
+              <button type="button" class="pf-type-btn">Дизайн</button>
+            </li>
+            <li class="pf-type-item">
+              <button type="button" class="pf-type-btn">Маркетинг</button>
+            </li>
+          </ul>
+
+          <!-- Section 1 part 2 - Portfolio list of work  -->
+          <ul class="pf-list">
+            <li class="list pf-item-list">
+              <a class="link pf-item-link" href="">
+                <div class="pf-hover-wrap">
+                  <img
+                    src="./images/portfolio/portfolio-gallery-1.jpg"
+                    alt="Изображение примера с портфолио"
+                    width="370"
+                  />
+                  <p class="pf-hover-text">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
+                </div>
+                <div class="pf-list-description">
+                  <h3 class="pf-item-title">Технокряк</h3>
+                  <p class="pf-item-type">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="list pf-item-list">
+              <a class="link pf-item-link" href=""
+                ><div class="pf-hover-wrap">
+                  <img
+                    src="./images/portfolio/portfolio-gallery-2.jpg"
+                    alt="Изображение примера с портфолио"
+                    width="370"
+                  />
+                  <p class="pf-hover-text">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
+                </div>
+                <div class="pf-list-description">
+                  <h3 class="pf-item-title">
+                    Постер <span lang="en">New Orlean vs Golden Star</span>
+                  </h3>
+                  <p class="pf-item-type">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="list pf-item-list">
+              <a class="link pf-item-link" href=""
+                ><div class="pf-hover-wrap">
+                  <img
+                    src="./images/portfolio/portfolio-gallery-3.jpg"
+                    alt="Изображение примера с портфолио"
+                    width="370"
+                  />
+                  <p class="pf-hover-text">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
+                </div>
+                <div class="pf-list-description">
+                  <h3 class="pf-item-title">
+                    Ресторан <span lang="en">Seafood</span>
+                  </h3>
+                  <p class="pf-item-type">Приложение</p>
+                </div>
+              </a>
+            </li>
+            <li class="list pf-item-list">
+              <a class="link pf-item-link" href="">
+                <div class="pf-hover-wrap">
+                  <img
+                    src="./images/portfolio/portfolio-gallery-4.jpg"
+                    alt="Изображение примера с портфолио"
+                    width="370"
+                  />
+                  <p class="pf-hover-text">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
+                </div>
+                <div class="pf-list-description">
+                  <h3 class="pf-item-title">
+                    Проект <span lang="en">Prime</span>
+                  </h3>
+                  <p class="pf-item-type">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="list pf-item-list">
+              <a class="link pf-item-link" href="">
+                <div class="pf-hover-wrap">
+                  <img
+                    src="./images/portfolio/portfolio-gallery-5.jpg"
+                    alt="Изображение примера с портфолио"
+                    width="370"
+                  />
+                  <p class="pf-hover-text">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
+                </div>
+                <div class="pf-list-description">
+                  <h3 class="pf-item-title">
+                    Проект <span lang="en">Boxes</span>
+                  </h3>
+                  <p class="pf-item-type">Приложение</p>
+                </div>
+              </a>
+            </li>
+            <li class="list pf-item-list">
+              <a class="link pf-item-link" href=""
+                ><div class="pf-hover-wrap">
+                  <img
+                    src="./images/portfolio/portfolio-gallery-6.jpg"
+                    alt="Изображение примера с портфолио"
+                    width="370"
+                  />
+                  <p class="pf-hover-text">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
+                </div>
+                <div class="pf-list-description">
+                  <h3 class="pf-item-title" lang="en">
+                    Inspiration has no Borders
+                  </h3>
+                  <p class="pf-item-type">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="list pf-item-list">
+              <a class="link pf-item-link" href=""
+                ><div class="pf-hover-wrap">
+                  <img
+                    src="./images/portfolio/portfolio-gallery-7.jpg"
+                    alt="Изображение примера с портфолио"
+                    width="370"
+                  />
+                  <p class="pf-hover-text">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
+                </div>
+                <div class="pf-list-description">
+                  <h3 class="pf-item-title">
+                    Издание <span lang="en">Limited Edition</span>
+                  </h3>
+                  <p class="pf-item-type">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="list pf-item-list">
+              <a class="link pf-item-link" href=""
+                ><div class="pf-hover-wrap">
+                  <img
+                    src="./images/portfolio/portfolio-gallery-8.jpg"
+                    alt="Изображение примера с портфолио"
+                    width="370"
+                  />
+                  <p class="pf-hover-text">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
+                </div>
+                <div class="pf-list-description">
+                  <h3 class="pf-item-title">
+                    Проект <span lang="en">LAB</span>
+                  </h3>
+                  <p class="pf-item-type">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="list pf-item-list">
+              <a class="link pf-item-link" href=""
+                ><div class="pf-hover-wrap">
+                  <img
+                    src="./images/portfolio/portfolio-gallery-9.jpg"
+                    alt="Изображение примера с портфолио"
+                    width="370"
+                  />
+                  <p class="pf-hover-text">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
+                </div>
+                <div class="pf-list-description">
+                  <h3 class="pf-item-title" lang="en">Growing Business</h3>
+                  <p class="pf-item-type">Приложение</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-adress">
+          <a class="link logo footer-adress__logo" href="./index.html" lang="en"
+            >Web<span class="footer-adress__logo-part">Studio</span></a
+          >
+          <address class="footer-contact">
+            <ul class="list footer-list">
+              <li class="footer-list__item">
+                <a
+                  class="link footer-list__address"
+                  href="https://goo.gl/maps/MbrSrdM2JUGR9XBEA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >г. Киев, пр-т Леси Украинки, 26
+                </a>
+              </li>
+              <li class="footer-list__item">
+                <a class="link footer-list__mail" href="mailto:info@example.com"
+                  >info@example.com
+                </a>
+              </li>
+              <li class="footer-list__item">
+                <a class="link footer-list__tel" href="tel:+380991111111"
+                  >38 099 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="footer-social">
+          <h3 class="footer-title">присоединяйтесь</h3>
+          <ul class="social-list list">
+            <li class="social-list__item">
+              <a href="" class="social-list__link footer__social-list link">
+                <svg class="social-list__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-instagram-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="" class="social-list__link footer__social-list link">
+                <svg class="social-list__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-twitter-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="" class="social-list__link footer__social-list link">
+                <svg class="social-list__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-facebook-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="" class="social-list__link footer__social-list link">
+                <svg class="social-list__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-linkedin-1"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-subscription">
+          <h3 class="footer-title">Подпишитесь на рассылку</h3>
+          <form class="subscription-form">
+            <input
+              class="subscription-form__input"
+              type="email"
+              placeholder="E-mail"
+              name="form-subscription"
+              required
+              id="form-subscription"
+            />
+            <button type="submit" class="btn subscription-form__btn">
+              Подписаться
+              <svg class="subscription-form__icon-send" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
