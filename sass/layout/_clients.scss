@@ -1,23 +1,59 @@
 .clients {
-  padding-top: var(--typical-padding);
-  padding-bottom: var(--typical-padding);
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include mobile {
+  }
+  @include tablet {
+  }
+  @include desktop {
+    padding-top: var(--typical-padding);
+    padding-bottom: var(--typical-padding);
+  }
 }
 
 .clients-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  margin-left: calc(-1 * var(--typical-gap));
+  @include mobile {
+  }
+  @include tablet {
+  }
+  @include desktop {
+  }
 }
 
 .clients-item {
   display: flex;
-  &:not(:last-child) {
-    margin-right: var(--typical-gap);
+  margin-bottom: var(--typical-gap);
+  margin-left: var(--typical-gap);
+  @include mobile {
+    flex-basis: calc(100% / 2 - var(--typical-gap));
+    margin-left: var(--typical-gap);
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0px;
+    }
+  }
+  @include tablet {
+    flex-basis: calc(100% / 3 - var(--typical-gap));
+    margin-left: var(--typical-gap);
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0px;
+    }
+  }
+  @include desktop {
+    &:nth-last-child(-n + 2) {
+      margin-left: var(--typical-gap);
+    }
+    flex-basis: calc(100% / 6 - var(--typical-gap));
   }
 }
 
 .clients-link {
   display: flex;
-  width: 170px;
+  width: 210px;
   height: 92px;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
@@ -32,5 +68,13 @@
     border-color: var(--accent-color);
     fill: var(--accent-color);
     outline: 0px;
+  }
+  @include mobile {
+  }
+  @include tablet {
+    width: 226px;
+  }
+  @include desktop {
+    width: 170px;
   }
 }
