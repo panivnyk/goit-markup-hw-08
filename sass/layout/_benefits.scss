@@ -51,6 +51,7 @@
   @include tablet {
     display: flex;
     flex-wrap: wrap;
+    margin-left: calc(-1 * var(--typical-gap));
   }
   @include desktop {
     margin-left: calc(-1 * var(--typical-gap));
@@ -58,16 +59,16 @@
 }
 
 .benefits-item {
+  &:not(:last-child) {
+    margin-bottom: var(--typical-gap);
+  }
   @include mobile {
   }
   @include tablet {
     flex-basis: calc(100% / 2 - var(--typical-gap));
-    &:nth-child(2n) {
-      margin-left: var(--typical-gap);
-      margin-right: calc(var(--typical-gap) / 2);
-    }
-    &:nth-child(2n + 1) {
-      margin-left: calc(var(--typical-gap) / 2);
+    margin-left: var(--typical-gap);
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0px;
     }
   }
 
@@ -76,6 +77,7 @@
     &:nth-child(n) {
       margin-left: var(--typical-gap);
       margin-right: 0;
+      margin-bottom: 0;
     }
   }
 }
@@ -84,5 +86,4 @@
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  margin-bottom: var(--typical-gap);
 }

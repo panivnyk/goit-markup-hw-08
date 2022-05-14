@@ -1,6 +1,14 @@
 .work {
   padding-top: 0px;
   padding-bottom: var(--typical-padding);
+  display: none;
+  @include mobile {
+  }
+  @include tablet {
+  }
+  @include desktop {
+    display: block;
+  }
 }
 .work-list {
   display: flex;
