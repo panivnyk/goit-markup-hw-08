@@ -2,8 +2,39 @@
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+
   .container {
+    // display: flex;
+
+    @include mobile {
+    }
+    @include tablet {
+    }
+    @include desktop {
+      display: flex;
+    }
+  }
+}
+.footer-tumb {
+  @include mobile {
+  }
+  @include tablet {
     display: flex;
+    justify-content: center;
+  }
+  @include desktop {
+  }
+}
+
+.footer-adress {
+  margin-bottom: 60px;
+  text-align: center;
+  @include tablet {
+    margin-right: 165px;
+  }
+  @include desktop {
+    margin-right: 0;
+    text-align: left;
   }
 }
 
@@ -23,7 +54,14 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   &:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+    @include mobile {
+    }
+    @include tablet {
+    }
+    @include desktop {
+      margin-bottom: 9px;
+    }
   }
 }
 
@@ -48,8 +86,16 @@
 
 /* Footer social list */
 .footer-social {
-  margin-left: 70px;
-  margin-top: 12px;
+  margin-bottom: 60px;
+  @include mobile {
+  }
+  @include tablet {
+    margin-top: 5px;
+  }
+  @include desktop {
+    margin-left: 70px;
+    margin-top: 12px;
+  }
 }
 
 .footer-title {
@@ -57,9 +103,16 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
+  text-align: center;
   color: var(--second-title-color);
   margin-bottom: 20px;
+  @include mobile {
+  }
+  @include tablet {
+  }
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .footer__social-list {
@@ -70,22 +123,37 @@
     fill var(--time-transition) var(--typical-cubic);
 }
 
+/* Footer subscription form */
 .footer-subscription {
-  margin-left: 93px;
-  margin-top: 12px;
+  text-align: center;
+  @include mobile {
+  }
+  @include tablet {
+  }
+  @include desktop {
+    margin-left: 93px;
+    margin-top: 12px;
+  }
 }
 
 .subscription-form {
-  display: flex;
+  @include mobile {
+  }
+  @include tablet {
+  }
+  @include desktop {
+    display: flex;
+  }
 }
 
 .subscription-form__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 15px;
   padding-bottom: 15px;
+  margin-bottom: 20px;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
@@ -101,6 +169,16 @@
     line-height: 1.25;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+  }
+  @include mobile {
+    width: 450px;
+  }
+  @include tablet {
+    width: 450px;
+  }
+
+  @include desktop {
+    width: 358;
   }
 }
 
