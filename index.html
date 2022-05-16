@@ -20,7 +20,7 @@
     />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
-  <body>
+  <body class="body">
     <!-- Header -->
     <header class="header">
       <div class="container">
@@ -68,67 +68,71 @@
           </li>
         </ul>
         <button type="button" class="mob-menu-open-btn">
-          <svg class="mob-menu-open-icon" width="40" height="40">
+          <svg class="mob-menu-open-icon" width="24" height="16">
             <use href="./images/icons.svg#icon-mob-menu-open"></use>
           </svg>
         </button>
       </div>
 
       <div class="mob-menu is-hidden">
-        <button type="button" class="mob-menu-close-btn">
-          <svg class="mob-menu-close-icon" width="40" height="40">
-            <use href="./images/icons.svg#icon-mob-menu-close"></use>
-          </svg>
-        </button>
+        <div class="mob-container">
+          <div class="mob-menu-top">
+            <button type="button" class="mob-menu-close-btn">
+              <svg class="mob-menu-close-icon" width="18.67" height="18.67">
+                <use href="./images/icons.svg#icon-mob-menu-close"></use>
+              </svg>
+            </button>
 
-        <ul class="list mob-menu-list">
-          <li class="mob-menu-list__item">
-            <a
-              class="link mob-menu-list__link mob-menu-list__link--current"
-              href="./index.html"
-              >Студия</a
-            >
-          </li>
-          <li class="mob-menu-list__item">
-            <a class="link mob-menu-list__link" href="./portfolio.html"
-              >Портфолио</a
-            >
-          </li>
-          <li class="mob-menu-list__item">
-            <a class="link mob-menu-list__link" href="">Контакты</a>
-          </li>
-        </ul>
-        <div class="mob-contact-tumb">
-          <ul class="list mob-menu-contact">
-            <li class="mob-menu-contact__point">
-              <a
-                class="link mob-menu-contact__link"
-                href="mailto:info@devstudio.com"
-              >
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="mob-menu-contact__point">
-              <a class="link mob-menu-contact__link" href="tel:+380961111111">
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-          <div class="mob-soc">
-            <ul class="mob-soc_list">
-              <li class="mob-soc_item">
-                <a class="link mob-soc_link" href="">Instagram</a>
+            <ul class="list mob-menu-list">
+              <li class="mob-menu-list__item">
+                <a
+                  class="link mob-menu-list__link mob-menu-list__link--current"
+                  href="./index.html"
+                  >Студия</a
+                >
               </li>
-              <li class="mob-soc_item">
-                <a class="link mob-soc_link" href="">Twitter</a>
+              <li class="mob-menu-list__item">
+                <a class="link mob-menu-list__link" href="./portfolio.html"
+                  >Портфолио</a
+                >
               </li>
-              <li class="mob-soc_item">
-                <a class="link mob-soc_link" href="">Facebook</a>
-              </li>
-              <li class="mob-soc_item">
-                <a class="link mob-soc_link" href="">LinkedIn</a>
+              <li class="mob-menu-list__item">
+                <a class="link mob-menu-list__link" href="">Контакты</a>
               </li>
             </ul>
+          </div>
+          <div class="mob-menu-bottom">
+            <ul class="list mob-menu-contact">
+              <li class="mob-menu-contact__point">
+                <a class="link mob-menu-contact__tel" href="tel:+380961111111">
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="mob-menu-contact__point">
+                <a
+                  class="link mob-menu-contact__mail"
+                  href="mailto:info@devstudio.com"
+                >
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <div class="mob-soc">
+              <ul class="list mob-soc_list">
+                <li class="mob-soc_item">
+                  <a class="link mob-soc_link" href="">Instagram</a>
+                </li>
+                <li class="mob-soc_item">
+                  <a class="link mob-soc_link" href="">Twitter</a>
+                </li>
+                <li class="mob-soc_item">
+                  <a class="link mob-soc_link" href="">Facebook</a>
+                </li>
+                <li class="mob-soc_item">
+                  <a class="link mob-soc_link" href="">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -152,7 +156,6 @@
         <div class="container">
           <h2 class="section-title visually-hidden">Наши преимущества</h2>
           <ul class="benefits-list list">
-            <!-- <div class="benefits-item-wrap"> -->
             <li class="benefits-item">
               <div class="benefits-icon-block">
                 <svg class="benefits-icon-logo" width="70" height="70">
@@ -165,7 +168,6 @@
                 формированию позиции.
               </p>
             </li>
-            <!-- </div> -->
             <li class="benefits-item">
               <div class="benefits-icon-block">
                 <svg class="benefits-icon-logo" width="70" height="70">
@@ -770,8 +772,10 @@
                   <use href="./images/icons.svg#icon-check"></use>
                 </svg>
               </span>
-              Соглашаюсь с рассылкой и принимаю&nbsp;
-              <a class="modal-form__privacy-link" href="">Условия договора</a>
+              <span>
+                Соглашаюсь с рассылкой и принимаю&nbsp;
+                <a class="modal-form__privacy-link" href="">Условия договора</a>
+              </span>
             </label>
           </div>
 

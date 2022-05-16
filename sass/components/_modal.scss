@@ -4,7 +4,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 528px;
+  width: 95vw;
   min-height: 581px;
   padding: 40px;
   background-color: #ffffff;
@@ -13,6 +13,15 @@
   border-radius: 4px;
 
   transition: transform var(--time-transition) var(--typical-cubic);
+
+  @include mobile {
+    width: 450px;
+  }
+  @include tablet {
+  }
+  @include desktop {
+    width: 528px;
+  }
 }
 
 .backdrop.is-hidden {
@@ -108,8 +117,8 @@
 
 .modal-form__check-text {
   display: flex;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   justify-content: center;
   align-items: center;
@@ -119,6 +128,7 @@
       border: none;
     }
   }
+
   .modal-form__check-icon {
     display: flex;
     width: 16px;
@@ -131,6 +141,15 @@
     transition: background-color var(--time-transition) var(--typical-cubic),
       fill var(--time-transition) var(--typical-cubic),
       border var(--time-transition) var(--typical-cubic);
+  }
+
+  @include mobile {
+  }
+  @include tablet {
+  }
+  @include desktop {
+    line-height: 1.71;
+    font-size: 14px;
   }
 }
 

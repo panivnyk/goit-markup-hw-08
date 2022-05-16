@@ -1,6 +1,6 @@
 .header {
   border-bottom: 1px solid #ececec;
-  .container {
+  > .container {
     display: flex;
     align-items: center;
     padding-top: 10px;
@@ -8,7 +8,8 @@
     @include mobile {
     }
     @include tablet {
-      display: flex;
+      padding-top: 0;
+      padding-bottom: 0;
     }
     @include desktop {
     }
@@ -43,6 +44,18 @@
 .header-contact {
   margin-left: auto;
   align-items: center;
+  @include mobile {
+  }
+  @include tablet {
+    display: block;
+    font-size: 12px;
+    line-height: 1.17;
+  }
+  @include desktop {
+    display: flex;
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .header-list__item:not(:first-child) {
@@ -79,6 +92,16 @@
 
 .header-contact__point:last-child {
   margin-left: 30px;
+  @include mobile {
+  }
+  @include tablet {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  @include desktop {
+    margin-left: 30px;
+    margin-top: 0;
+  }
 }
 
 .header-contact__link {
@@ -92,6 +115,17 @@
   &:hover {
     color: var(--accent-color);
   }
+
+  @include mobile {
+  }
+  @include tablet {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  @include desktop {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .header-contact__icon {
@@ -104,12 +138,40 @@
   z-index: 10;
   top: 0;
   background-color: #ffffff;
-  height: 100vh;
   width: 100vw;
-  padding-top: 10px;
-  padding-right: 15px;
-  padding-left: 10px;
+  height: 100vh;
+  // transform: scaleY(1);
+
+  .mob-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    overflow: scroll;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mobile {
+      width: 480px;
+    }
+    @include tablet {
+      width: 768px;
+    }
+    @include desktop {
+      width: 1200px;
+    }
+  }
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+  }
 }
+
+// .mob-menu.is-hidden {
+//   transform: scaleY(0.1);
+// }
 
 .mob-menu-list__item {
   &:not(:last-child) {
@@ -124,8 +186,11 @@
   font-size: 40px;
   line-height: 1.18;
   letter-spacing: 0.02em;
-
   color: var(--first-title-color);
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
 }
 
 .link.mob-menu-list__link--current {
@@ -135,42 +200,115 @@
 .mob-menu-open-btn,
 .mob-menu-close-btn {
   display: block;
+  width: 40px;
+  height: 40px;
   margin-left: auto;
   background-color: transparent;
   border: none;
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+  }
 }
+.mob-menu-close-btn {
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
 .mob-menu-open-icon,
 .mob-menu-close-icon {
-  width: 24px;
-  height: 16px;
   &:hover,
-  &focus {
+  &:focus {
     fill: var(--accent-color);
   }
 }
 
-.mob-contact-tumb {
-  margin-top: auto;
+.mob-menu-top,
+.mob-menu-bottom {
+  padding-left: 40px;
+}
+
+.mob-menu-bottom {
+  margin-top: 32px;
+  padding-bottom: 48px;
+}
+
+.mob-menu-contact__point {
+  margin-bottom: 32px;
+  &:last-child {
+    margin-bottom: 64px;
+  }
+}
+.mob-menu-contact__tel {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+  @include mobile {
+    font-size: 34px;
+  }
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+.mob-menu-contact__mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--basic-text-color);
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
 }
 
 .mob-soc_list {
   display: flex;
 }
 .mob-soc_item {
-  &:first-child {
-    margin-right: 40px;
-  }
-  &:not(:first-child) {
+  position: relative;
+  &:not(:last-child) {
     margin-right: 20px;
+
+    &::after {
+      content: '';
+      width: 22px;
+      height: 1px;
+      background-color: rgba(33, 33, 33, 0.2);
+      position: absolute;
+      transform: rotate(90deg);
+      left: 100%;
+      bottom: 50%;
+    }
   }
 }
 
 .mob-soc_link {
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+  @include mobile {
+    font-size: 18px;
+  }
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+  }
+
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
 }
