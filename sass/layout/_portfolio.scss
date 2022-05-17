@@ -15,11 +15,12 @@
 .pf-type-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+
   margin-bottom: 40px;
   @include mobile {
   }
   @include tablet {
+    justify-content: center;
     margin-bottom: 30px;
   }
   @include desktop {
@@ -28,14 +29,20 @@
 }
 
 .pf-type-item {
-  margin-left: 8px;
+  margin-right: 8px;
   margin-bottom: 15px;
-  &:first-child {
-    margin-left: 0px;
+  &:last-child {
+    margin-right: 0px;
   }
+
+  &:nth-last-child(-n + 2) {
+    margin-bottom: 0px;
+  }
+
   @include mobile {
   }
   @include tablet {
+    margin-bottom: 0;
   }
   @include desktop {
     margin-bottom: 0;
@@ -78,6 +85,14 @@
   &:not(:last-child) {
     margin-bottom: calc(-1 * var(--typical-gap));
   }
+
+  @include mobile {
+  }
+  @include tablet {
+  }
+  @include desktop {
+    margin-bottom: calc(-1 * var(--typical-gap));
+  }
 }
 
 .pf-item-list {
@@ -100,12 +115,12 @@
   }
   @include tablet {
     width: 354px;
-    margin-left: var(--typical-gap);
     flex-basis: calc(100% / 2 - var(--typical-gap));
   }
   @include desktop {
     width: 370px;
     flex-basis: calc(100% / 3 - var(--typical-gap));
+    margin-bottom: var(--typical-gap);
   }
 }
 
