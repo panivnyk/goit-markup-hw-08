@@ -140,7 +140,11 @@
   background-color: #ffffff;
   width: 100vw;
   height: 100vh;
-  // transform: scaleY(1);
+  transition: opacity var(--time-transition), visibility var(--time-transition);
+
+  .mob-menu.is-hidden .modal {
+    transform: translateX(0.1);
+  }
 
   .mob-container {
     display: flex;

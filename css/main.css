@@ -518,6 +518,10 @@ body {
   background-color: #ffffff;
   width: 100vw;
   height: 100vh;
+  transition: opacity var(--time-transition), visibility var(--time-transition);
+}
+.mob-menu .mob-menu.is-hidden .modal {
+  transform: translateX(0.1);
 }
 .mob-menu .mob-container {
   display: flex;
